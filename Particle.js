@@ -6,6 +6,7 @@ class Particle {
     this.pos = pos.copy();
     this.lifespan = 255;
     this.w = 20
+    this.c = color(255);
   }
 
   run() {
@@ -24,13 +25,14 @@ class Particle {
     if (this.pos.y > height) {
       this.vel.y *= -1;
       this.pos.y = height;
+      this.c = color(random(100, 200), random(0,100), random(0,50));
     }
   }
 
   display() {
     strokeWeight(2);
+    fill(this.c, this.lifespan);
     stroke(255, this.lifespan);
-    fill(255, this.lifespan);
     ellipse(this.pos.x, this.pos.y, this.w, this.w);
   }
 
