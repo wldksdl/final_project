@@ -6,10 +6,13 @@ class ParticleSystem {
 
   addParticle() {
     let r = random(1);
-    if (r < 0.5) {
+    if (r <= 0.3) {
       this.particles.push(new Particle(this.origin));
-    } else {
+    }
+    if (0.3 < r <= 0.6) {
       this.particles.push(new Triangle(this.origin));
+    }
+    if (0.6 < r <= 1) {
       this.particles.push(new Confetti(this.origin));
     }
   }
