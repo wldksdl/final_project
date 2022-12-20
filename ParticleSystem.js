@@ -10,6 +10,7 @@ class ParticleSystem {
       this.particles.push(new Particle(this.origin));
     } else {
       this.particles.push(new Triangle(this.origin));
+      this.particles.push(new Confetti(this.origin));
     }
   }
 
