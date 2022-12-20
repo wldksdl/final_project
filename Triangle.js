@@ -2,6 +2,7 @@ class Triangle extends Particle {
   constructor(pos) {
     super(pos);
     this.w = 10;
+    this.c = color(255);
   }
 
   run() {
@@ -20,11 +21,12 @@ class Triangle extends Particle {
     if (this.pos.y > height) {
       this.vel.y *= -1;
       this.pos.y = height;
+      this.c = color(random(0, 50), random(50,200), random(0,100));
     }
   }
 
   display() {
-    fill(255, this.lifespan);
+    fill(this.c, this.lifespan);
     stroke(255, this.lifespan);
     strokeWeight(2);
     triangle(
