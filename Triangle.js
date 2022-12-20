@@ -35,18 +35,20 @@ class Triangle extends Particle {
     fill(this.c, this.lifespan);
     stroke(255, this.lifespan);
     strokeWeight(2);
+    imageMode(CENTER);
+    image(soso, this.pos.x, this.pos.y, this.w, this.w);
     //push();
     //translate(this.pos.x, this.pos.y);
     //let theta = map(this.pos.x, 0, width, 0, TWO_PI * 20);
     //rotate(PI);
-    triangle(
-      this.pos.x - this.w,
-      this.pos.y + this.w + 7,
-      this.pos.x,
-      this.pos.y,
-      this.pos.x + this.w,
-      this.pos.y + this.w + 7
-    );
+    // triangle(
+    //   this.pos.x - this.w,
+    //   this.pos.y + this.w + 7,
+    //   this.pos.x,
+    //   this.pos.y,
+    //   this.pos.x + this.w,
+    //   this.pos.y + this.w + 7
+    // );
     //pop();
   }
 }

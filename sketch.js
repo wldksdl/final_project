@@ -2,6 +2,8 @@ let particleSystem;
 
 function preload() {
   smile = loadImage("smile.png");
+  angry = loadImage("angry.png");
+  soso = loadImage("soso.png");
 }
 
 function setup() {

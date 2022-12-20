@@ -40,6 +40,8 @@ class Confetti extends Particle {
     fill(this.c, this.lifespan);
     stroke(255, this.lifespan);
     strokeWeight(2);
-    rect(this.pos.x, this.pos.y, this.w, this.w);
+    imageMode(CENTER);
+    image(angry, this.pos.x, this.pos.y, this.w, this.w);
+    //rect(this.pos.x, this.pos.y, this.w, this.w);
   }
 }
