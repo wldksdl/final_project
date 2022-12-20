@@ -1,4 +1,4 @@
-class Particle {
+class ParticleImage {
   constructor(pos) {
     this.acc = createVector(0, 0.15);
     this.vel = createVector(random(-2, 2), random(-2, 0));
@@ -39,11 +39,8 @@ class Particle {
   }
 
   display() {
-      rectMode(CENTER);
-      strokeWeight(2);
-      fill(this.c, this.lifespan);
-      stroke(255, this.lifespan);
-      ellipse(this.pos.x, this.pos.y, this.w, this.w);
+      imageMode(CENTER);
+      image(smile, this.pos.x, this.pos.y, this.w, this.w);
   }
 
   isDead() {

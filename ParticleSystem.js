@@ -8,6 +8,7 @@ class ParticleSystem {
     let r = random(1);
     if (r < 0.5) {
       this.particles.push(new Particle(this.origin));
+      this.particles.push(new ParticleImage(this.origin));
     } else {
       this.particles.push(new Triangle(this.origin));
       this.particles.push(new Confetti(this.origin));
