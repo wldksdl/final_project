@@ -31,7 +31,7 @@ class ConfettiImage extends Particle {
       );
 
       this.synth.triggerAttack("C5");
-      this.synth.triggerRelease(random(0.2, 0.8));
+      this.synth.triggerRelease(random(0.2, 0.5));
     }
   }
 

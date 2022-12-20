@@ -34,7 +34,7 @@ class ParticleImage {
       );
 
       this.synth.triggerAttack("G5");
-      this.synth.triggerRelease(random(0.2, 0.6));
+      this.synth.triggerRelease(random(0.2, 0.5));
     }
   }
 

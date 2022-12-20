@@ -25,8 +25,8 @@ class Triangle extends Particle {
       //this.w = 30;
       this.c = color(random(50, 150), random(200,255), random(50,150), this.lifespan);
       
-      this.synth.triggerAttack("E5");
-      this.synth.triggerRelease(random(0.1, 0.8));
+      // this.synth.triggerAttack("E5");
+      // this.synth.triggerRelease(random(0.1, 0.8));
     }
   }
 
@@ -37,18 +37,20 @@ class Triangle extends Particle {
     strokeWeight(2);
     // imageMode(CENTER);
     // image(soso, this.pos.x, this.pos.y, this.w, this.w);
-    //push();
-    //translate(this.pos.x, this.pos.y);
-    //let theta = map(this.pos.x, 0, width, 0, TWO_PI * 20);
-    //rotate(PI);
-    triangle(
-      this.pos.x - this.w,
-      this.pos.y + this.w + this.w/2,
-      this.pos.x,
-      this.pos.y,
-      this.pos.x + this.w,
-      this.pos.y + this.w + this.w/2
-    );
-    //pop();
+    // triangle(
+    //   this.pos.x - this.w,
+    //   this.pos.y + this.w + this.w/2,
+    //   this.pos.x,
+    //   this.pos.y,
+    //   this.pos.x + this.w,
+    //   this.pos.y + this.w + this.w/2
+    // );
+
+    push();
+    translate(this.pos.x, this.pos.y);
+    let theta = map(this.pos.x, 0, width, 0, TWO_PI * 20);
+    rotate(theta);
+    triangle(0-this.w, 0+this.w + this.w/2,0,0,0 + this.w, 0+this.w + this.w/2);
+    pop();
   }
 }

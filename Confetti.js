@@ -30,8 +30,8 @@ class Confetti extends Particle {
         this.lifespan
       );
 
-      this.synth.triggerAttack("C5");
-      this.synth.triggerRelease(random(0.2, 0.8));
+      // this.synth.triggerAttack("C5");
+      // this.synth.triggerRelease(random(0.2, 0.8));
     }
   }
 
@@ -42,6 +42,12 @@ class Confetti extends Particle {
     strokeWeight(2);
     // imageMode(CENTER);
     // image(angry, this.pos.x, this.pos.y, this.w, this.w);
-    rect(this.pos.x, this.pos.y, this.w, this.w);
+    // rect(this.pos.x, this.pos.y, this.w, this.w);
+    push();
+    translate(this.pos.x, this.pos.y);
+    let theta = map(this.pos.x, 0, width, 0, TWO_PI * 20);
+    rotate(theta);
+    rect(0, 0, this.w, this.w);
+    pop();
   }
 }
