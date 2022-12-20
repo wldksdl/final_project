@@ -13,6 +13,10 @@ function setup() {
 
 function draw() {
   background(50);
+  let txt = "Emotional Change";
+  fill(255);
+  textSize(37);
+  text(txt, 110, 100, 500, 300);
   particleSystem.run();
 }
 
