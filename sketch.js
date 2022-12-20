@@ -16,7 +16,8 @@ function draw() {
   let txt = "Emotional Change";
   fill(255);
   textSize(37);
-  text(txt, 110, 100, 500, 300);
+  textAlign(CENTER);
+  text(txt, 0, 100, 500, 300);
   particleSystem.run();
 }
 

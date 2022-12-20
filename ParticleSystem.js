@@ -9,13 +9,23 @@ class ParticleSystem {
     if (r < 0.5) {
       this.particles.push(new Particle(this.origin));
       this.particles.push(new ParticleImage(this.origin));
-    } else {
       this.particles.push(new Triangle(this.origin));
+    } else {
+      // this.particles.push(new Triangle(this.origin));
       this.particles.push(new TriangleImage(this.origin));
       this.particles.push(new Confetti(this.origin));
       this.particles.push(new ConfettiImage(this.origin));
     }
   }
+
+  // addParticle() {
+  //   this.particles.push(new Particle(this.origin));
+  //   this.particles.push(new ParticleImage(this.origin));
+  //   this.particles.push(new Triangle(this.origin));
+  //   this.particles.push(new TriangleImage(this.origin));
+  //   this.particles.push(new Confetti(this.origin));
+  //   this.particles.push(new ConfettiImage(this.origin));
+  // }
 
   run() {
     for (let particle of this.particles) {
