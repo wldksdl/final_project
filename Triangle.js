@@ -22,7 +22,7 @@ class Triangle extends Particle {
     if (this.pos.y > height) {
       this.vel.y *= -1;
       this.pos.y = height;
-      this.c = color(random(0, 50), random(50,200), random(0,100));
+      this.c = color(random(50, 150), random(200,255), random(50,150));
       
       this.synth.triggerAttack("E5");
       this.synth.triggerRelease(random(0.1, 0.8));
