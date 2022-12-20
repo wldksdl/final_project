@@ -2,7 +2,8 @@ class Confetti extends Particle {
   constructor(pos) {
     super(pos);
     this.w = 20;
-    this.c = color(255);
+    this.c = 255;
+    this.synth = new p5.MonoSynth();
   }
 
   run() {
@@ -21,7 +22,10 @@ class Confetti extends Particle {
     if (this.pos.y > height) {
       this.vel.y *= -1;
       this.pos.y = height;
-      this.c = color(random(0, 100), random(0,50), random(50,200));
+      this.c = color(random(0, 100), random(0, 50), random(50, 200));
+
+      this.synth.triggerAttack("C5");
+      this.synth.triggerRelease(random(0.2, 0.8));
     }
   }
 
