@@ -26,7 +26,7 @@ class Particle {
     if (this.pos.y > height) {
       this.vel.y *= -1;
       this.pos.y = height;
-      this.c = color(random(200, 255), random(50,150), random(50,150));
+      this.c = color(random(200, 255), random(50,150), random(50,150), this.lifespan);
       
       this.synth.triggerAttack("G5");
       this.synth.triggerRelease(random(0.2, 0.6));
