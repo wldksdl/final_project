@@ -25,7 +25,7 @@ class Particle {
     if (this.pos.y > height) {
       this.vel.y *= -1;
       this.pos.y = height;
-      this.w = 40;
+      //this.w = 40;
       this.c = color(
         random(200, 255),
         random(50, 150),

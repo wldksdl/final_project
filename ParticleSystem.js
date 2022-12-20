@@ -11,7 +11,9 @@ class ParticleSystem {
       this.particles.push(new ParticleImage(this.origin));
     } else {
       this.particles.push(new Triangle(this.origin));
+      this.particles.push(new TriangleImage(this.origin));
       this.particles.push(new Confetti(this.origin));
+      this.particles.push(new ConfettiImage(this.origin));
     }
   }
 
