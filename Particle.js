@@ -26,6 +26,7 @@ class Particle {
     if (this.pos.y > height) {
       this.vel.y *= -1;
       this.pos.y = height;
+      this.w = 40;
       this.c = color(random(200, 255), random(50,150), random(50,150), this.lifespan);
       
       this.synth.triggerAttack("G5");
@@ -37,7 +38,9 @@ class Particle {
     strokeWeight(2);
     fill(this.c, this.lifespan);
     stroke(255, this.lifespan);
-    ellipse(this.pos.x, this.pos.y, this.w, this.w);
+    imageMode(CENTER);
+    image(smile, this.pos.x, this.pos.y, this.w, this.w);
+    //ellipse(this.pos.x, this.pos.y, this.w, this.w);
   }
 
   isDead() {

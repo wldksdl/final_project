@@ -1,5 +1,9 @@
 let particleSystem;
 
+function preload() {
+  smile = loadImage("smile.png");
+}
+
 function setup() {
   createCanvas(500, 600);
   particleSystem = new ParticleSystem(createVector(width / 2, 50));
