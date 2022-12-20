@@ -1,12 +1,16 @@
 class ParticleSystem {
-
   constructor(pos) {
     this.origin = pos.copy();
     this.particles = [];
   }
 
   addParticle() {
-    this.particles.push(new Particle(this.origin));
+    let r = random(1);
+    if (r < 0.5) {
+      this.particles.push(new Particle(this.origin));
+    } else {
+      this.particles.push(new Triangle(this.origin));
+    }
   }
 
   run() {
@@ -14,6 +18,6 @@ class ParticleSystem {
       particle.run();
     }
 
-    this.particles = this.particles.filter(particle => !particle.isDead());
+    this.particles = this.particles.filter((particle) => !particle.isDead());
   }
 }
